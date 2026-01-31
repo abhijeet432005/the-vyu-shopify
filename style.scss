@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    position: relative;
+    padding-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: default;
+
+    .page-1 {
+        width: 100vw;
+        height: 90vh;
+        background-color: #0112FF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: relative;
+
+
+        h1 {
+            font-size: 12rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 10rem;
+            letter-spacing: -0.4rem;
+        }
+
+        p {
+            width: 20vw;
+            text-align: center;
+            margin-top: 1vw;
+            font-size: 1vw;
+        }
+
+        .img-wrapper {
+            width: 20vw;
+            height: 35vh;
+            position: absolute;
+            pointer-events: none;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 10;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+
+    .page-2 {
+        width: 100vw;
+
+        margin-top: 5vw;
+        background-color: #F0A330;
+        font-family: sans-serif;
+        position: relative;
+        padding: 4vw;
+        
+        .heading {
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+
+            h1 {
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 6rem;
+                line-height: 5rem;
+                letter-spacing: -0.02rem;
+            }
+
+            .text {
+                padding: 0.2rem 0.5rem;
+                border-radius: 2rem;
+                border: 3px solid #F0A330;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                background-color: #D1255C;
+                color: #F0A330;
+                width: fit-content;
+                position: absolute;
+                transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s ;
+            }
+            
+            .text-1 {
+                top: -1rem;
+                left: 22vw;
+            }
+
+            .text-2 {
+                top: 2vh;
+                right: 30vw;
+                transform: rotate(15deg);
+            }
+
+            .text-3 {
+                top: 4.3vw;
+                left: 45vw;
+            }
+
+            .text:hover {
+                transform: translateY(-15px);
+            }
+
+            .para {
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+
+        .food-layout {
+            margin-top: 10vw;
+            display: flex;
+            justify-content: center;
+            // gap: 2rem;
+            align-items: stretch;
+
+            .line {
+                align-self: stretch;
+                width: 1px;
+                background-color: black;
+            }
+
+            .layout-1, .layout-2, .layout-3 {
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+
+                .top {
+                    display: flex;
+                    align-items: center;
+                    gap: 1vw;
+
+                    .logo {
+
+                        width: 3vw;
+                        height: 3vw;
+                        border-radius: 50%;
+                        background-color: brown;
+                    }
+                }
+
+                .mid {
+                    margin-top: 3vw;
+                    font-family: monospace;
+                    width: 25vw;
+                    font-size: 1rem;
+                }
+
+                .bottom {
+                    margin-top: 10vw;
+                    width: 25vw;
+                    height: 40vh;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+    }
+}
