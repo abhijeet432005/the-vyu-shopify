@@ -4,11 +4,23 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 main {
   width: 100%;
   position: relative;
@@ -17,7 +29,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   cursor: default;
 }
 main .page-1 {
@@ -126,36 +137,208 @@ main .page-2 .food-layout .line {
   width: 1px;
   background-color: black;
 }
-main .page-2 .food-layout .layout-1, main .page-2 .food-layout .layout-2, main .page-2 .food-layout .layout-3 {
+main .page-2 .food-layout .layout-1,
+main .page-2 .food-layout .layout-2,
+main .page-2 .food-layout .layout-3 {
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  transition: all 2s;
 }
-main .page-2 .food-layout .layout-1 .top, main .page-2 .food-layout .layout-2 .top, main .page-2 .food-layout .layout-3 .top {
+main .page-2 .food-layout .layout-1 .top,
+main .page-2 .food-layout .layout-2 .top,
+main .page-2 .food-layout .layout-3 .top {
   display: flex;
   align-items: center;
   gap: 1vw;
 }
-main .page-2 .food-layout .layout-1 .top .logo, main .page-2 .food-layout .layout-2 .top .logo, main .page-2 .food-layout .layout-3 .top .logo {
+main .page-2 .food-layout .layout-1 .top .logo,
+main .page-2 .food-layout .layout-2 .top .logo,
+main .page-2 .food-layout .layout-3 .top .logo {
   width: 3vw;
   height: 3vw;
   border-radius: 50%;
   background-color: brown;
 }
-main .page-2 .food-layout .layout-1 .mid, main .page-2 .food-layout .layout-2 .mid, main .page-2 .food-layout .layout-3 .mid {
+main .page-2 .food-layout .layout-1 .mid,
+main .page-2 .food-layout .layout-2 .mid,
+main .page-2 .food-layout .layout-3 .mid {
   margin-top: 3vw;
   font-family: monospace;
   width: 25vw;
   font-size: 1rem;
 }
-main .page-2 .food-layout .layout-1 .bottom, main .page-2 .food-layout .layout-2 .bottom, main .page-2 .food-layout .layout-3 .bottom {
+main .page-2 .food-layout .layout-1 .bottom,
+main .page-2 .food-layout .layout-2 .bottom,
+main .page-2 .food-layout .layout-3 .bottom {
   margin-top: 10vw;
   width: 25vw;
   height: 40vh;
 }
-main .page-2 .food-layout .layout-1 .bottom img, main .page-2 .food-layout .layout-2 .bottom img, main .page-2 .food-layout .layout-3 .bottom img {
+main .page-2 .food-layout .layout-1 .bottom img,
+main .page-2 .food-layout .layout-2 .bottom img,
+main .page-2 .food-layout .layout-3 .bottom img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transition: all 0.8s ease;
+}
+main .page-3 {
+  margin-top: 20vh;
+  width: 100vw;
+  min-height: 250vh;
+  position: relative;
+}
+main .page-3 .top-head {
+  width: 100%;
+  height: 100vh;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main .page-3 .top-head .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+main .page-3 .top-head .wrapper h1 {
+  font-weight: 600;
+  font-size: 5vw;
+  line-height: 4.8vw;
+}
+main .page-3 .top-head .wrapper .singel {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+main .page-3 .top-head .wrapper .singel h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 5vw;
+}
+main .page-3 .top-head .wrapper .singel p {
+  font-size: 0.8rem;
+  width: 15vw;
+  text-align: start;
+}
+main .page-3 .top-head .wrapper :nth-child(3) {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .page-3 .center {
+  width: 100vw;
+  display: flex;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main .page-3 .center .left {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 5vw;
+}
+main .page-3 .center .left h1 {
+  width: 25vw;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+main .page-3 .center .left h3 {
+  margin-top: 1rem;
+  opacity: 0.5;
+}
+main .page-3 .center .right {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  padding: 5vw;
+}
+main .page-3 .center .right h1 {
+  width: 20vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+main .page-3 .center .right .circle {
+  width: 10vw;
+  height: 10vw;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+main .page-3 .bottom {
+  width: 100vw;
+}
+main .page-3 .bottom .top {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 8vw;
+  padding: 4vw;
+}
+main .page-3 .bottom .top h1 {
+  width: 45vw;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+main .page-3 .bottom .end {
+  width: 100vw;
+  display: flex;
+  padding: 5vw;
+}
+main .page-3 .bottom .end .left {
+  width: 50vw;
+  height: 60vh;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+main .page-3 .bottom .end .left p {
+  font-size: 1rem;
+  font-family: monospace;
+}
+main .page-3 .bottom .end .left h1 {
+  margin-top: 2rem;
+  width: 25vw;
+}
+main .page-3 .bottom .end .right {
+  width: 50vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+}
+main .page-3 .bottom .end .right .wrapper h1 {
+  text-transform: uppercase;
+}
+main .page-3 .bottom .end .right .wrapper p {
+  width: 30vw;
+  margin-top: 1rem;
+}
+main .page-3 .float-img {
+  position: sticky;
+  top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -90vh;
+  width: 35vw;
+  height: 90vh;
+}
+main .page-3 .float-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  animation: float 4s ease-in-out infinite;
 }/*# sourceMappingURL=style.css.map */

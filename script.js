@@ -42,3 +42,14 @@ page1.addEventListener("mouseleave", () => {
   imgWrapper.style.transform = "translate(-50%, -50%)";
   img.src = "https://images.unsplash.com/photo-1764990189201-8025ff64d981?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwMHxDRHd1d1hKQWJFd3x8ZW58MHx8fHx8"
 });
+
+
+let layouts = document.querySelectorAll(".layout-1, .layout-2, .layout-3");
+
+layouts.forEach(layout => {
+  const img = layout.querySelector(".bottom img");
+
+  layout.addEventListener("mouseenter", () => {
+    img.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0 100%)";
+  });
+});
