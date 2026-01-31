@@ -1,6 +1,9 @@
 let page1 = document.querySelector(".page-1");
 let imgWrapper = document.querySelector(".page-1 .img-wrapper");
 let img = imgWrapper.querySelector("img");
+const btn = document.querySelector(".page-1 button");
+let allowMove = true;
+
 
 const images = [
   "https://images.unsplash.com/photo-1715772605517-8c1e09dc31f5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDExOXxDRHd1d1hKQWJFd3x8ZW58MHx8fHx8",
@@ -22,6 +25,9 @@ let index = 0;
 let lastX = 0;
 
 page1.addEventListener("mousemove", (e) => {
+
+  if (!allowMove) return
+
   const rect = page1.getBoundingClientRect();
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
@@ -44,12 +50,24 @@ page1.addEventListener("mouseleave", () => {
 });
 
 
-let layouts = document.querySelectorAll(".layout-1, .layout-2, .layout-3");
-
-layouts.forEach(layout => {
-  const img = layout.querySelector(".bottom img");
-
-  layout.addEventListener("mouseenter", () => {
-    img.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0 100%)";
-  });
+btn.addEventListener("mouseenter", () => {
+  allowMove = false;
+  imgWrapper.style.left = "50%";
+  imgWrapper.style.top = "50%";
+  imgWrapper.style.transform = "translate(-50%, -50%)";
 });
+
+btn.addEventListener("mouseleave", () => {
+  allowMove = true;
+});
+
+
+// let layouts = document.querySelectorAll(".layout-1, .layout-2, .layout-3");
+
+// layouts.forEach(layout => {
+//   const img = layout.querySelector(".bottom img");
+
+//   layout.addEventListener("mouseenter", () => {
+//     img.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0 100%)";
+//   });
+// });

@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 @keyframes float {
@@ -21,64 +23,107 @@ body {
     transform: translateY(0px);
   }
 }
-main {
+.page-1 {
   width: 100%;
-  position: relative;
-  padding-top: 2vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: default;
-}
-main .page-1 {
-  width: 100vw;
   height: 90vh;
-  background-color: #0112FF;
+  background-color: #ffecec;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #373535;
   position: relative;
 }
-main .page-1 h1 {
-  font-size: 12rem;
+.page-1 h1 {
+  font-size: 5vw;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-transform: uppercase;
   text-align: center;
-  line-height: 10rem;
+  line-height: 5.5rem;
   letter-spacing: -0.4rem;
 }
-main .page-1 p {
-  width: 20vw;
+.page-1 p {
+  width: 25vw;
   text-align: center;
   margin-top: 1vw;
   font-size: 1vw;
 }
-main .page-1 .img-wrapper {
+.page-1 .img-wrapper {
   width: 20vw;
   height: 35vh;
   position: absolute;
   pointer-events: none;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 10;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
-main .page-1 .img-wrapper img {
+.page-1 .img-wrapper img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .page-2 {
-  width: 100vw;
+.page-1 .mobile {
+  display: none;
+  width: 35vh;
+  height: 35vh;
+  pointer-events: none;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 10;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.page-1 .mobile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.page-1 button {
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  color: black;
+  margin-top: 10vw;
+  border-radius: 5vw;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.page-1 button::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #373535;
+  border-radius: 5vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+.page-1 button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.page-1 button:hover {
+  color: white;
+}
+
+.page-2 {
+  width: 100%;
   margin-top: 5vw;
-  background-color: #F0A330;
   font-family: sans-serif;
   position: relative;
   padding: 4vw;
 }
-main .page-2 .heading {
+.page-2 .heading {
   position: relative;
   text-align: center;
   display: flex;
@@ -86,14 +131,14 @@ main .page-2 .heading {
   justify-content: start;
   align-items: center;
 }
-main .page-2 .heading h1 {
+.page-2 .heading h1 {
   text-transform: uppercase;
   text-align: center;
   font-size: 6rem;
   line-height: 5rem;
   letter-spacing: -0.02rem;
 }
-main .page-2 .heading .text {
+.page-2 .heading .text {
   padding: 0.2rem 0.5rem;
   border-radius: 2rem;
   border: 3px solid #F0A330;
@@ -106,92 +151,112 @@ main .page-2 .heading .text {
   position: absolute;
   transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
 }
-main .page-2 .heading .text-1 {
+.page-2 .heading .text-1 {
   top: -1rem;
   left: 22vw;
 }
-main .page-2 .heading .text-2 {
+.page-2 .heading .text-2 {
   top: 2vh;
   right: 30vw;
   transform: rotate(15deg);
 }
-main .page-2 .heading .text-3 {
+.page-2 .heading .text-3 {
   top: 4.3vw;
   left: 45vw;
 }
-main .page-2 .heading .text:hover {
+.page-2 .heading .text:hover {
   transform: translateY(-15px);
 }
-main .page-2 .heading .para {
+.page-2 .heading .para {
   text-align: center;
   margin-top: 1rem;
 }
-main .page-2 .food-layout {
+.page-2 .food-layout {
   margin-top: 10vw;
   display: flex;
   justify-content: center;
   align-items: stretch;
+  flex-wrap: wrap;
 }
-main .page-2 .food-layout .line {
+.page-2 .food-layout .line {
   align-self: stretch;
   width: 1px;
   background-color: black;
+  opacity: 0.3;
 }
-main .page-2 .food-layout .layout-1,
-main .page-2 .food-layout .layout-2,
-main .page-2 .food-layout .layout-3 {
+.page-2 .food-layout .layout-1,
+.page-2 .food-layout .layout-2,
+.page-2 .food-layout .layout-3 {
   display: flex;
   flex-direction: column;
   padding: 2rem;
   transition: all 2s;
 }
-main .page-2 .food-layout .layout-1 .top,
-main .page-2 .food-layout .layout-2 .top,
-main .page-2 .food-layout .layout-3 .top {
+.page-2 .food-layout .layout-1 .top,
+.page-2 .food-layout .layout-2 .top,
+.page-2 .food-layout .layout-3 .top {
   display: flex;
   align-items: center;
   gap: 1vw;
 }
-main .page-2 .food-layout .layout-1 .top .logo,
-main .page-2 .food-layout .layout-2 .top .logo,
-main .page-2 .food-layout .layout-3 .top .logo {
+.page-2 .food-layout .layout-1 .top .logo,
+.page-2 .food-layout .layout-2 .top .logo,
+.page-2 .food-layout .layout-3 .top .logo {
   width: 3vw;
   height: 3vw;
   border-radius: 50%;
-  background-color: brown;
 }
-main .page-2 .food-layout .layout-1 .mid,
-main .page-2 .food-layout .layout-2 .mid,
-main .page-2 .food-layout .layout-3 .mid {
-  margin-top: 3vw;
-  font-family: monospace;
-  width: 25vw;
-  font-size: 1rem;
-}
-main .page-2 .food-layout .layout-1 .bottom,
-main .page-2 .food-layout .layout-2 .bottom,
-main .page-2 .food-layout .layout-3 .bottom {
-  margin-top: 10vw;
-  width: 25vw;
-  height: 40vh;
-}
-main .page-2 .food-layout .layout-1 .bottom img,
-main .page-2 .food-layout .layout-2 .bottom img,
-main .page-2 .food-layout .layout-3 .bottom img {
+.page-2 .food-layout .layout-1 .top .logo img,
+.page-2 .food-layout .layout-2 .top .logo img,
+.page-2 .food-layout .layout-3 .top .logo img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  transition: all 0.8s ease;
 }
-main .page-3 {
+.page-2 .food-layout .layout-1 .mid,
+.page-2 .food-layout .layout-2 .mid,
+.page-2 .food-layout .layout-3 .mid {
+  margin-top: 3vw;
+  font-family: monospace;
+  width: 25vw;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.page-2 .food-layout .layout-1 .bottom,
+.page-2 .food-layout .layout-2 .bottom,
+.page-2 .food-layout .layout-3 .bottom {
+  margin-top: 10vw;
+  width: 25vw;
+  height: 40vh;
+}
+.page-2 .food-layout .layout-1 .bottom img,
+.page-2 .food-layout .layout-2 .bottom img,
+.page-2 .food-layout .layout-3 .bottom img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: all 0.4s ease;
+}
+.page-2 .food-layout .layout-1:hover .bottom img {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.page-2 .food-layout .layout-2:hover .bottom img {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.page-2 .food-layout .layout-3:hover .bottom img {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.page-3 {
   margin-top: 20vh;
-  width: 100vw;
+  width: 100%;
   min-height: 250vh;
   position: relative;
 }
-main .page-3 .top-head {
+.page-3 .top-head {
   width: 100%;
   height: 100vh;
   text-transform: uppercase;
@@ -201,40 +266,47 @@ main .page-3 .top-head {
   align-items: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-main .page-3 .top-head .wrapper {
+.page-3 .top-head .wrapper {
   display: flex;
   flex-direction: column;
 }
-main .page-3 .top-head .wrapper h1 {
+.page-3 .top-head .wrapper h1 {
   font-weight: 600;
   font-size: 5vw;
   line-height: 4.8vw;
 }
-main .page-3 .top-head .wrapper .singel {
+.page-3 .top-head .wrapper .singel {
+  width: 100%;
   display: flex;
   align-items: end;
   justify-content: center;
+  gap: 1rem;
 }
-main .page-3 .top-head .wrapper .singel h1 {
+.page-3 .top-head .wrapper .singel h1 {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 5vw;
 }
-main .page-3 .top-head .wrapper .singel p {
+.page-3 .top-head .wrapper .singel p {
   font-size: 0.8rem;
-  width: 15vw;
   text-align: start;
 }
-main .page-3 .top-head .wrapper :nth-child(3) {
+.page-3 .top-head .wrapper :nth-child(3) {
   width: -moz-fit-content;
   width: fit-content;
 }
-main .page-3 .center {
-  width: 100vw;
+.page-3 .top-head .wrapper .text {
+  display: none;
+}
+.page-3 .top-head .wrapper .mobile {
+  display: none;
+}
+.page-3 .center {
+  width: 100%;
   display: flex;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-main .page-3 .center .left {
+.page-3 .center .left {
   width: 50vw;
   height: 100vh;
   display: flex;
@@ -242,18 +314,18 @@ main .page-3 .center .left {
   justify-content: end;
   padding: 5vw;
 }
-main .page-3 .center .left h1 {
+.page-3 .center .left h1 {
   width: 25vw;
   font-size: 2rem;
   font-weight: 600;
   line-height: 2rem;
   text-transform: uppercase;
 }
-main .page-3 .center .left h3 {
+.page-3 .center .left h3 {
   margin-top: 1rem;
   opacity: 0.5;
 }
-main .page-3 .center .right {
+.page-3 .center .right {
   width: 50vw;
   display: flex;
   flex-direction: column;
@@ -261,22 +333,26 @@ main .page-3 .center .right {
   align-items: end;
   padding: 5vw;
 }
-main .page-3 .center .right h1 {
+.page-3 .center .right h1 {
   width: 20vw;
   font-weight: 600;
   text-transform: uppercase;
 }
-main .page-3 .center .right .circle {
-  width: 10vw;
-  height: 10vw;
-  border: 1px solid black;
-  border-radius: 50%;
+.page-3 .center .right .circle {
+  width: 8vw;
+  margin-bottom: 5vw;
 }
-main .page-3 .bottom {
-  width: 100vw;
+.page-3 .center .right .circle img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-main .page-3 .bottom .top {
-  width: 100vw;
+.page-3 .bottom {
+  width: 100%;
+}
+.page-3 .bottom .top {
+  width: 100%;
   height: 20vh;
   display: flex;
   justify-content: center;
@@ -284,18 +360,18 @@ main .page-3 .bottom .top {
   margin-top: 8vw;
   padding: 4vw;
 }
-main .page-3 .bottom .top h1 {
+.page-3 .bottom .top h1 {
   width: 45vw;
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
 }
-main .page-3 .bottom .end {
-  width: 100vw;
+.page-3 .bottom .end {
+  width: 100%;
   display: flex;
   padding: 5vw;
 }
-main .page-3 .bottom .end .left {
+.page-3 .bottom .end .left {
   width: 50vw;
   height: 60vh;
   text-transform: uppercase;
@@ -303,15 +379,15 @@ main .page-3 .bottom .end .left {
   flex-direction: column;
   justify-content: end;
 }
-main .page-3 .bottom .end .left p {
+.page-3 .bottom .end .left p {
   font-size: 1rem;
   font-family: monospace;
 }
-main .page-3 .bottom .end .left h1 {
+.page-3 .bottom .end .left h1 {
   margin-top: 2rem;
   width: 25vw;
 }
-main .page-3 .bottom .end .right {
+.page-3 .bottom .end .right {
   width: 50vw;
   height: 60vh;
   display: flex;
@@ -319,26 +395,261 @@ main .page-3 .bottom .end .right {
   align-items: end;
   flex-direction: column;
 }
-main .page-3 .bottom .end .right .wrapper h1 {
+.page-3 .bottom .end .right .wrapper h1 {
   text-transform: uppercase;
 }
-main .page-3 .bottom .end .right .wrapper p {
+.page-3 .bottom .end .right .wrapper p {
   width: 30vw;
   margin-top: 1rem;
 }
-main .page-3 .float-img {
+.page-3 .float-img {
   position: sticky;
   top: 10vh;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -90vh;
-  width: 35vw;
+  margin-top: -85vh;
+  width: 45vw;
   height: 90vh;
+  z-index: 99;
 }
-main .page-3 .float-img img {
+.page-3 .float-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   animation: float 4s ease-in-out infinite;
+}
+
+@media (max-width: 1200px) {
+  .page-1 h1 {
+    font-size: 6vh;
+    line-height: 5vh;
+    letter-spacing: normal;
+  }
+  .page-1 .desktop {
+    display: none;
+  }
+  .page-1 .mobile {
+    display: inline-flex;
+  }
+  .page-1 p {
+    font-size: 1rem;
+    width: 40vh;
+  }
+  .page-2 {
+    padding: 5vh;
+  }
+  .page-2 .heading .text {
+    display: none;
+  }
+  .page-2 .food-layout {
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: repeat(auto-fit, 400px);
+  }
+  .page-2 .food-layout .desktop {
+    display: none;
+  }
+  .page-2 .food-layout .layout-1,
+  .page-2 .food-layout .layout-2,
+  .page-2 .food-layout .layout-3 {
+    padding: 3vw;
+  }
+  .page-2 .food-layout .layout-1 .top,
+  .page-2 .food-layout .layout-2 .top,
+  .page-2 .food-layout .layout-3 .top {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+  }
+  .page-2 .food-layout .layout-1 .top .logo,
+  .page-2 .food-layout .layout-2 .top .logo,
+  .page-2 .food-layout .layout-3 .top .logo {
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+  }
+  .page-2 .food-layout .layout-1 .top .logo img,
+  .page-2 .food-layout .layout-2 .top .logo img,
+  .page-2 .food-layout .layout-3 .top .logo img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .page-2 .food-layout .layout-1 .mid,
+  .page-2 .food-layout .layout-2 .mid,
+  .page-2 .food-layout .layout-3 .mid {
+    margin-top: 2vw;
+    font-family: monospace;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .page-2 .food-layout .layout-1 .bottom,
+  .page-2 .food-layout .layout-2 .bottom,
+  .page-2 .food-layout .layout-3 .bottom {
+    margin-top: 7vw;
+    width: 100%;
+  }
+  .page-2 .food-layout .layout-1 .bottom img,
+  .page-2 .food-layout .layout-2 .bottom img,
+  .page-2 .food-layout .layout-3 .bottom img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .page-3 {
+    margin-top: 10vh;
+  }
+  .page-3 .top-head .wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+  .page-3 .top-head .wrapper .text {
+    display: inline-flex;
+    text-align: center;
+  }
+  .page-3 .top-head .wrapper h1 {
+    font-weight: 600;
+    font-size: 5vh;
+    line-height: 4.8vh;
+  }
+  .page-3 .top-head .wrapper .text-1 {
+    display: none;
+  }
+  .page-3 .top-head .wrapper .singel {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+  }
+  .page-3 .top-head .wrapper .singel h1 {
+    display: none;
+  }
+  .page-3 .top-head .wrapper .singel p {
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+  }
+  .page-3 .float-img {
+    position: sticky;
+    top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -88vh;
+    width: 35vh;
+    height: 70vh;
+  }
+  .page-3 .float-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    animation: float 4s ease-in-out infinite;
+  }
+  .page-3 .center {
+    width: 100%;
+    display: flex;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-top: 8vh;
+  }
+  .page-3 .center .left {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 5vw;
+  }
+  .page-3 .center .left h1 {
+    width: 35vh;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-transform: uppercase;
+  }
+  .page-3 .center .left h3 {
+    margin-top: 1rem;
+    opacity: 0.5;
+  }
+  .page-3 .center .right {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding: 5vw;
+  }
+  .page-3 .center .right h1 {
+    width: 35vh;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .page-3 .center .right .circle {
+    width: 8vh;
+  }
+  .page-3 .bottom {
+    width: 100%;
+  }
+  .page-3 .bottom .top {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-top: 8vw;
+    padding: 4vw;
+  }
+  .page-3 .bottom .top h1 {
+    width: 60vh;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+  }
+  .page-3 .bottom .end {
+    width: 100%;
+    display: flex;
+    margin-top: 35vh;
+    flex-direction: column-reverse;
+    gap: 5vh;
+  }
+  .page-3 .bottom .end .left {
+    width: 50vw;
+    height: auto;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .page-3 .bottom .end .left p {
+    font-size: 1rem;
+    font-family: monospace;
+  }
+  .page-3 .bottom .end .left h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    width: 30vh;
+  }
+  .page-3 .bottom .end .right {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+  }
+  .page-3 .bottom .end .right .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+  }
+  .page-3 .bottom .end .right .wrapper h1 {
+    text-transform: uppercase;
+  }
+  .page-3 .bottom .end .right .wrapper p {
+    width: 45vh;
+    margin-top: 1rem;
+    text-align: end;
+  }
 }/*# sourceMappingURL=style.css.map */
