@@ -712,7 +712,7 @@ body {
     letter-spacing: -0.02rem;
   }
   .page-2 .heading .para {
-    font-size: 1.5vh;
+    font-size: 1.8vh;
   }
   .page-2 .heading .para .mobile {
     display: none;
@@ -838,7 +838,7 @@ body {
     height: fit-content;
     display: flex;
     justify-content: start;
-    padding: 5vw;
+    padding: 0vh;
   }
   .page-3 .center .left h1 {
     width: 35vh;
