@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  cursor: default;
 }
 
 html,
@@ -124,6 +125,7 @@ body {
   padding: 4vw;
 }
 .page-2 .heading {
+  width: 100%;
   position: relative;
   text-align: center;
   display: flex;
@@ -353,7 +355,7 @@ body {
 }
 .page-3 .bottom .top {
   width: 100%;
-  height: 20vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -437,10 +439,16 @@ body {
     width: 40vh;
   }
   .page-2 {
-    padding: 5vh;
+    padding: 4vh;
   }
   .page-2 .heading .text {
     display: none;
+  }
+  .page-2 .heading h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 7vh;
+    letter-spacing: -0.02rem;
   }
   .page-2 .food-layout {
     display: grid;
@@ -498,7 +506,279 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   .page-3 {
-    margin-top: 10vh;
+    padding: 4vh;
+    margin-top: 8vh;
+  }
+  .page-3 .top-head {
+    width: 100%;
+    height: 100vh;
+    text-transform: uppercase;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  .page-3 .top-head .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .page-3 .top-head .wrapper h1 {
+    font-weight: 600;
+    font-size: 5vw;
+    line-height: 4.8vw;
+  }
+  .page-3 .top-head .wrapper .singel {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .page-3 .top-head .wrapper .singel h1 {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 5vw;
+  }
+  .page-3 .top-head .wrapper .singel p {
+    font-size: 0.8rem;
+    text-align: start;
+  }
+  .page-3 .top-head .wrapper :nth-child(3) {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .page-3 .top-head .wrapper .text {
+    display: none;
+  }
+  .page-3 .top-head .wrapper .mobile {
+    display: none;
+  }
+  .page-3 .float-img {
+    position: sticky;
+    top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -88vh;
+    width: 70vh;
+    height: 80vh;
+  }
+  .page-3 .float-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    animation: float 4s ease-in-out infinite;
+  }
+  .page-3 .center {
+    width: 100%;
+    display: flex;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-top: 8vh;
+    padding: 0;
+  }
+  .page-3 .center .left {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0vh;
+  }
+  .page-3 .center .left h1 {
+    width: 35vh;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-transform: uppercase;
+  }
+  .page-3 .center .left h3 {
+    margin-top: 1rem;
+    opacity: 0.5;
+  }
+  .page-3 .center .right {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0vh;
+  }
+  .page-3 .center .right h1 {
+    width: 35vh;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .page-3 .center .right .circle {
+    width: 15vh;
+  }
+  .page-3 .bottom {
+    width: 100%;
+  }
+  .page-3 .bottom .top {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-top: 8vw;
+    padding: 0vh;
+  }
+  .page-3 .bottom .top h1 {
+    width: 60vh;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+  }
+  .page-3 .bottom .end {
+    width: 100%;
+    display: flex;
+    margin-top: 35vh;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5vh;
+    padding: 0vh;
+  }
+  .page-3 .bottom .end .left {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .page-3 .bottom .end .left p {
+    font-size: 1rem;
+    font-family: monospace;
+  }
+  .page-3 .bottom .end .left h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    width: 30vh;
+  }
+  .page-3 .bottom .end .right {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+  }
+  .page-3 .bottom .end .right .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+  }
+  .page-3 .bottom .end .right .wrapper h1 {
+    text-transform: uppercase;
+  }
+  .page-3 .bottom .end .right .wrapper p {
+    width: 45vh;
+    margin-top: 1rem;
+    text-align: end;
+  }
+}
+@media (max-width: 850px) {
+  .page-1 h1 {
+    font-size: 4vh;
+    line-height: 4vh;
+    letter-spacing: normal;
+  }
+  .page-1 .desktop {
+    display: none;
+  }
+  .page-1 .mobile {
+    display: inline-flex;
+  }
+  .page-1 p {
+    font-size: 1rem;
+    width: 40vh;
+  }
+  .page-2 {
+    padding: 2vh;
+  }
+  .page-2 .heading .text {
+    display: none;
+  }
+  .page-2 .heading h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 7vh;
+    line-height: 7vh;
+    letter-spacing: -0.02rem;
+  }
+  .page-2 .heading .para {
+    font-size: 1.5vh;
+  }
+  .page-2 .heading .para .mobile {
+    display: none;
+  }
+  .page-2 .food-layout {
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: 1fr;
+  }
+  .page-2 .food-layout .desktop {
+    display: none;
+  }
+  .page-2 .food-layout .layout-1,
+  .page-2 .food-layout .layout-2,
+  .page-2 .food-layout .layout-3 {
+    padding: 3vw;
+  }
+  .page-2 .food-layout .layout-1 .top,
+  .page-2 .food-layout .layout-2 .top,
+  .page-2 .food-layout .layout-3 .top {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+  }
+  .page-2 .food-layout .layout-1 .top .logo,
+  .page-2 .food-layout .layout-2 .top .logo,
+  .page-2 .food-layout .layout-3 .top .logo {
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+  }
+  .page-2 .food-layout .layout-1 .top .logo img,
+  .page-2 .food-layout .layout-2 .top .logo img,
+  .page-2 .food-layout .layout-3 .top .logo img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .page-2 .food-layout .layout-1 .mid,
+  .page-2 .food-layout .layout-2 .mid,
+  .page-2 .food-layout .layout-3 .mid {
+    margin-top: 2vw;
+    font-family: monospace;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .page-2 .food-layout .layout-1 .bottom,
+  .page-2 .food-layout .layout-2 .bottom,
+  .page-2 .food-layout .layout-3 .bottom {
+    margin-top: 7vw;
+    width: 100%;
+  }
+  .page-2 .food-layout .layout-1 .bottom img,
+  .page-2 .food-layout .layout-2 .bottom img,
+  .page-2 .food-layout .layout-3 .bottom img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .page-3 {
+    margin-top: 5vh;
+    padding: 2vh;
+    min-height: 100vh;
+  }
+  .page-3 .top-head {
+    margin-top: 0;
   }
   .page-3 .top-head .wrapper {
     justify-content: center;
@@ -528,7 +808,7 @@ body {
   .page-3 .top-head .wrapper .singel p {
     width: 100%;
     text-align: center;
-    font-size: 3vh;
+    font-size: 2.5vh;
   }
   .page-3 .float-img {
     position: sticky;
@@ -537,7 +817,7 @@ body {
     margin-right: auto;
     margin-top: -88vh;
     width: 35vh;
-    height: 70vh;
+    height: 80vh;
   }
   .page-3 .float-img img {
     width: 100%;
@@ -549,15 +829,15 @@ body {
   .page-3 .center {
     width: 100%;
     display: flex;
+    flex-direction: column-reverse;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    margin-top: 8vh;
   }
   .page-3 .center .left {
-    width: 50vw;
-    height: 100vh;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    justify-content: start;
     padding: 5vw;
   }
   .page-3 .center .left h1 {
@@ -572,33 +852,34 @@ body {
     opacity: 0.5;
   }
   .page-3 .center .right {
-    width: 50vw;
+    width: 100%;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
-    padding: 5vw;
+    padding: 0;
   }
   .page-3 .center .right h1 {
-    width: 35vh;
+    width: 100%;
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
   }
   .page-3 .center .right .circle {
-    width: 8vh;
+    width: 12vh;
   }
   .page-3 .bottom {
     width: 100%;
   }
   .page-3 .bottom .top {
     width: 100%;
-    height: 20vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    margin-top: 8vw;
-    padding: 4vw;
+    margin-top: 10vh;
+    padding: 0;
   }
   .page-3 .bottom .top h1 {
     width: 60vh;
@@ -609,9 +890,10 @@ body {
   .page-3 .bottom .end {
     width: 100%;
     display: flex;
-    margin-top: 35vh;
+    margin-top: 0vh;
     flex-direction: column-reverse;
     gap: 5vh;
+    padding: 0vh;
   }
   .page-3 .bottom .end .left {
     width: 50vw;
@@ -632,24 +914,23 @@ body {
   }
   .page-3 .bottom .end .right {
     width: 100%;
-    height: auto;
+    min-height: 70vh;
     display: flex;
-    justify-content: end;
-    align-items: end;
-    flex-direction: column;
+    align-items: start;
+    justify-content: start;
   }
   .page-3 .bottom .end .right .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: end;
+    justify-content: start;
+    align-items: start;
   }
   .page-3 .bottom .end .right .wrapper h1 {
     text-transform: uppercase;
   }
   .page-3 .bottom .end .right .wrapper p {
-    width: 45vh;
+    width: 100%;
     margin-top: 1rem;
-    text-align: end;
+    text-align: start;
   }
 }/*# sourceMappingURL=style.css.map */

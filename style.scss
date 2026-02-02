@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    cursor: default;
 }
 
 html,
@@ -157,6 +158,7 @@ main {
     padding: 4vw;
 
     .heading {
+        width: 100%;
         position: relative;
         text-align: center;
         display: flex;
@@ -440,7 +442,7 @@ main {
 
         .top {
             width: 100%;
-            height: 20vh;
+            height: 30vh;
             display: flex;
             justify-content: center;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -526,7 +528,7 @@ main {
 
 }
 
-@media (max-width: 850px) {}
+
 
 @media (max-width: 1200px) {
     .page-1 {
@@ -551,11 +553,20 @@ main {
     }
 
     .page-2 {
-        padding: 5vh;
+        padding: 4vh;
 
         .heading {
+
             .text {
                 display: none;
+            }
+
+            h1 {
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 7vh;
+                // line-height: 5rem;
+                letter-spacing: -0.02rem;
             }
         }
 
@@ -615,9 +626,334 @@ main {
     }
 
     .page-3 {
-        margin-top: 10vh;
+        padding: 4vh;
+        margin-top: 8vh;
 
         .top-head {
+            width: 100%;
+            height: 100vh;
+            text-transform: uppercase;
+            margin-top: 4rem;
+            display: flex;
+            // justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    // width: 25vw;
+                    font-weight: 600;
+                    font-size: 5vw;
+                    line-height: 4.8vw;
+                }
+
+                .singel {
+                    width: 100%;
+                    display: flex;
+                    align-items: end;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    // gap: 0.5rem;
+                    h1 {
+                        width: fit-content;
+                        font-size: 5vw;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                        // width: 15vw;
+                        text-align: start;
+
+                    }
+                }
+
+
+                :nth-child(3) {
+                    width: fit-content;
+                }
+
+                .text {
+                    display: none;
+                }
+
+                .mobile {
+                    display: none;
+                }
+            }
+
+
+
+
+        }
+
+
+        .float-img {
+            position: sticky;
+            top: 10vh;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -88vh;
+            width: 70vh;
+            height: 80vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                animation: float 4s ease-in-out infinite;
+            }
+        }
+
+        .center {
+            width: 100%;
+            // height: 100vh;
+            display: flex;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 8vh;
+            padding: 0;
+
+            .left {
+                width: 50vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding: 0vh;
+
+                h1 {
+                    width: 35vh;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    line-height: 2rem;
+                    text-transform: uppercase;
+                }
+
+                h3 {
+                    margin-top: 1rem;
+                    opacity: 0.5;
+                }
+            }
+
+            .right {
+                width: 50vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: end;
+                padding: 0vh;
+
+                h1 {
+                    width: 35vh;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+                .circle {
+                    width: 15vh;
+                }
+            }
+        }
+
+
+        .bottom {
+            width: 100%;
+
+            .top {
+                width: 100%;
+                height: 40vh;
+                display: flex;
+                justify-content: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin-top: 8vw;
+                padding: 0vh;
+
+                h1 {
+                    width: 60vh;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: 600;
+                }
+            }
+
+            .end {
+                width: 100%;
+                display: flex;
+                margin-top: 35vh;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 5vh;
+                padding: 0vh;
+
+
+                .left {
+                    width: fit-content;
+                    height: auto;
+                    text-transform: uppercase;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+
+                    p {
+                        font-size: 1rem;
+                        font-family: monospace;
+
+                    }
+
+                    h1 {
+                        font-size: 1.5rem;
+                        margin-top: 1rem;
+                        width: 30vh;
+
+                    }
+                }
+
+                .right {
+                    width: fit-content;
+                    height: auto;
+                    display: flex;
+                    justify-content: end;
+                    align-items: end;
+                    flex-direction: column;
+
+                    .wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: end;
+                        align-items: end;
+
+                        h1 {
+                            text-transform: uppercase;
+                        }
+
+                        p {
+                            width: 45vh;
+                            margin-top: 1rem;
+                            text-align: end;
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+    }
+}
+
+@media (max-width: 850px) {
+    .page-1 {
+        h1 {
+            font-size: 4vh;
+            line-height: 4vh;
+            letter-spacing: normal;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        .mobile {
+            display: inline-flex;
+        }
+
+        p {
+            font-size: 1rem;
+            width: 40vh;
+        }
+    }
+
+    .page-2 {
+        padding: 2vh;
+
+        .heading {
+            .text {
+                display: none;
+            }
+
+            h1 {
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 7vh;
+                line-height: 7vh;
+                letter-spacing: -0.02rem;
+            }
+
+            .para {
+                font-size: 1.5vh;
+
+                .mobile {
+                    display: none;
+                }
+            }
+        }
+
+        .food-layout {
+            display: grid;
+            gap: 1vw;
+            grid-template-columns: 1fr;
+
+            .desktop {
+                display: none;
+            }
+
+            .layout-1,
+            .layout-2,
+            .layout-3 {
+                padding: 3vw;
+
+                .top {
+                    display: flex;
+                    align-items: center;
+                    gap: 1vw;
+
+                    .logo {
+                        width: 3vh;
+                        height: 3vh;
+                        border-radius: 50%;
+                        // background-color: brown;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .mid {
+                    margin-top: 2vw;
+                    font-family: monospace;
+                    width: 100%;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
+
+                .bottom {
+                    margin-top: 7vw;
+                    width: 100%;
+                    // height: 40vh;
+
+                    img {
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                    }
+                }
+            }
+        }
+    }
+
+    .page-3 {
+        margin-top: 5vh;
+        padding: 2vh;
+        min-height: 100vh;
+
+        .top-head {
+            margin-top: 0;
 
             .wrapper {
                 justify-content: center;
@@ -655,7 +991,7 @@ main {
                     p {
                         width: 100%;
                         text-align: center;
-                        font-size: 3vh;
+                        font-size: 2.5vh;
                     }
                 }
             }
@@ -668,7 +1004,7 @@ main {
             margin-right: auto;
             margin-top: -88vh;
             width: 35vh;
-            height: 70vh;
+            height: 80vh;
 
             img {
                 width: 100%;
@@ -682,15 +1018,17 @@ main {
             width: 100%;
             // height: 100vh;
             display: flex;
+            flex-direction: column-reverse;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            margin-top: 8vh;
+            // margin-top: 8vh;
 
             .left {
-                width: 50vw;
-                height: 100vh;
+                width: 100%;
+                // min-height: 80vh;
+                height: fit-content;
                 display: flex;
-                flex-direction: column;
-                justify-content: end;
+                // flex-direction: row;
+                justify-content: start;
                 padding: 5vw;
 
                 h1 {
@@ -708,22 +1046,23 @@ main {
             }
 
             .right {
-                width: 50vw;
+                width: 100%;
+                min-height: 80vh;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: end;
-                padding: 5vw;
+                padding: 0;
 
                 h1 {
-                    width: 35vh;
+                    width: 100%;
                     font-size: 1.5rem;
                     font-weight: 600;
                     text-transform: uppercase;
                 }
 
                 .circle {
-                    width: 8vh;
+                    width: 12vh;
                 }
             }
         }
@@ -734,12 +1073,12 @@ main {
 
             .top {
                 width: 100%;
-                height: 20vh;
+                height: 100vh;
                 display: flex;
                 justify-content: center;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                margin-top: 8vw;
-                padding: 4vw;
+                margin-top: 10vh;
+                padding: 0;
 
                 h1 {
                     width: 60vh;
@@ -752,10 +1091,10 @@ main {
             .end {
                 width: 100%;
                 display: flex;
-                margin-top: 35vh;
+                margin-top: 0vh;
                 flex-direction: column-reverse;
                 gap: 5vh;
-                // padding: 5vh;
+                padding: 0vh;
 
 
                 .left {
@@ -782,26 +1121,26 @@ main {
 
                 .right {
                     width: 100%;
-                    height: auto;
+                    min-height: 70vh;
                     display: flex;
-                    justify-content: end;
-                    align-items: end;
-                    flex-direction: column;
-                    
+                    align-items: start;
+                    justify-content: start;
+
+
                     .wrapper {
                         display: flex;
                         flex-direction: column;
-                        justify-content: end;
-                        align-items: end;
+                        justify-content: start;
+                        align-items: start;
 
                         h1 {
                             text-transform: uppercase;
                         }
 
                         p {
-                            width: 45vh;
+                            width: 100%;
                             margin-top: 1rem;
-                            text-align: end;
+                            text-align: start;
                         }
                     }
 
